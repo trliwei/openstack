@@ -1,0 +1,332 @@
+cp glance/.git/hooks/commit-msg oslo.context/.git/hooks
+
+
+wang@poseidon:~$ git config --global user.name "Firstname Lastname" 
+The program 'git' is currently not installed. You can install it by typing: 
+sudo apt-get install git 
+wang@poseidon:~$ sudo apt-get install git 
+[sudo] password for wang: 
+Sorry, try again. 
+[sudo] password for wang: 
+Reading package lists... Done 
+Building dependency tree       
+Reading state information... Done 
+The following packages were automatically installed and are no longer required: 
+  fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 
+  fcitx-frontend-qt4 fcitx-libs fcitx-libs-gclient fcitx-libs-qt 
+  fcitx-module-dbus fcitx-modules 
+Use 'apt-get autoremove' to remove them. 
+The following extra packages will be installed: 
+  git-man liberror-perl 
+Suggested packages: 
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk 
+  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn 
+The following NEW packages will be installed: 
+  git git-man liberror-perl 
+0 upgraded, 3 newly installed, 0 to remove and 164 not upgraded. 
+Need to get 3,306 kB of archives. 
+After this operation, 21.9 MB of additional disk space will be used. 
+Do you want to continue? [Y/n] y 
+Get:1 http://cn.archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB] 
+Get:2 http://cn.archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.3 [699 kB] 
+Get:3 http://cn.archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.3 [2,586 kB] 
+Fetched 3,306 kB in 3s (918 kB/s) 
+Selecting previously unselected package liberror-perl. 
+(Reading database ... 170263 files and directories currently installed.) 
+Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ... 
+Unpacking liberror-perl (0.17-1.1) ... 
+Selecting previously unselected package git-man. 
+Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.3_all.deb ... 
+Unpacking git-man (1:1.9.1-1ubuntu0.3) ... 
+Selecting previously unselected package git. 
+Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.3_amd64.deb ... 
+Unpacking git (1:1.9.1-1ubuntu0.3) ... 
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ... 
+Setting up liberror-perl (0.17-1.1) ... 
+Setting up git-man (1:1.9.1-1ubuntu0.3) ... 
+Setting up git (1:1.9.1-1ubuntu0.3) ... 
+wang@poseidon:~$ git config --global user.name "Firstname Lastname" 
+wang@poseidon:~$ git config --global user.name "Wei Li" 
+wang@poseidon:~$ git config --global user.email "wei.li@easystack.cn" 
+wang@poseidon:~$ apt-get install git-review 
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied) 
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root? 
+wang@poseidon:~$ sudo apt-get install git-review 
+Reading package lists... Done 
+Building dependency tree       
+Reading state information... Done 
+The following packages were automatically installed and are no longer required: 
+  fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 
+  fcitx-frontend-qt4 fcitx-libs fcitx-libs-gclient fcitx-libs-qt 
+  fcitx-module-dbus fcitx-modules 
+Use 'apt-get autoremove' to remove them. 
+The following NEW packages will be installed: 
+  git-review 
+0 upgraded, 1 newly installed, 0 to remove and 164 not upgraded. 
+Need to get 18.1 kB of archives. 
+After this operation, 120 kB of additional disk space will be used. 
+Get:1 http://cn.archive.ubuntu.com/ubuntu/ trusty/universe git-review all 1.23-1 [18.1 kB] 
+Fetched 18.1 kB in 1s (11.7 kB/s)   
+Selecting previously unselected package git-review. 
+(Reading database ... 171011 files and directories currently installed.) 
+Preparing to unpack .../git-review_1.23-1_all.deb ... 
+Unpacking git-review (1.23-1) ... 
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ... 
+Setting up git-review (1.23-1) ... 
+wang@poseidon:~$ cd code 
+wang@poseidon:~/code$ git clone https://github.com/openstack/glance.git 
+Cloning into 'glance'... 
+fatal: unable to access 'https://github.com/openstack/glance.git/': Could not resolve host: github.com 
+wang@poseidon:~/code$ ping github.com 
+PING github.com (192.30.253.112) 56(84) bytes of data. 
+64 bytes from 192.30.253.112: icmp_seq=1 ttl=40 time=344 ms 
+64 bytes from 192.30.253.112: icmp_seq=2 ttl=40 time=278 ms 
+64 bytes from 192.30.253.112: icmp_seq=3 ttl=40 time=493 ms 
+64 bytes from 192.30.253.112: icmp_seq=4 ttl=40 time=315 ms 
+64 bytes from 192.30.253.112: icmp_seq=5 ttl=40 time=333 ms 
+
+64 bytes from 192.30.253.112: icmp_seq=6 ttl=40 time=355 ms 
+64 bytes from 192.30.253.112: icmp_seq=7 ttl=40 time=378 ms 
+64 bytes from 192.30.253.112: icmp_seq=8 ttl=40 time=402 ms 
+^C 
+--- github.com ping statistics --- 
+9 packets transmitted, 8 received, 11% packet loss, time 8008ms 
+rtt min/avg/max/mdev = 278.794/362.784/493.092/60.552 ms 
+wang@poseidon:~/code$ git clone https://github.com/openstack/glance.git 
+Cloning into 'glance'... 
+remote: Counting objects: 49538, done. 
+remote: Compressing objects: 100% (3/3), done. 
+remote: Total 49538 (delta 10), reused 10 (delta 10), pack-reused 49525 
+Receiving objects: 100% (49538/49538), 24.76 MiB | 21.00 KiB/s, done. 
+Resolving deltas: 100% (32429/32429), done. 
+Checking connectivity... done. 
+wang@poseidon:~/code$ ls 
+glance 
+wang@poseidon:~/code$ cd glance 
+wang@poseidon:~/code/glance$ git remote add  gerrit https://liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org/openstack/glance.git 
+
+cp glance/.git/hooks/commit-msg oslo.context/.git/hooks
+
+wang@poseidon:~/code/glance$ git remote -v 
+gerrit	https://liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org/openstack/glance.git (fetch) 
+gerrit	https://liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org/openstack/glance.git (push) 
+origin	https://github.com/openstack/glance.git (fetch) 
+origin	https://github.com/openstack/glance.git (push) 
+wang@poseidon:~/code/glance$ git review -s 
+Problems encountered installing commit-msg hook 
+The following command failed with exit code 1 
+    "scp  liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org:hooks/commit-msg .git/hooks/commit-msg" 
+----------------------- 
+.git/hooks/commit-msg: No such file or directory 
+----------------------- 
+wang@poseidon:~/code/glance$ git review -s 
+Problems encountered installing commit-msg hook 
+The following command failed with exit code 1 
+    "scp  liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org:hooks/commit-msg .git/hooks/commit-msg" 
+----------------------- 
+.git/hooks/commit-msg: No such file or directory 
+----------------------- 
+wang@poseidon:~/code/glance$ ls .git/hooks 
+applypatch-msg.sample  pre-applypatch.sample      pre-push.sample 
+commit-msg.sample      pre-commit.sample          pre-rebase.sample 
+post-update.sample     prepare-commit-msg.sample  update.sample 
+wang@poseidon:~/code/glance$ git review -s -vv 
+2016-07-20 17:32:41.713866 Running: git log --color=never --oneline HEAD^1..HEAD 
+2016-07-20 17:32:41.716270 Running: git remote 
+2016-07-20 17:32:41.718200 Running: git branch -a --color=never 
+2016-07-20 17:32:41.720340 Running: git rev-parse --show-toplevel --git-dir 
+2016-07-20 17:32:41.722221 Running: git remote show -n gerrit 
+Found origin Push URL: https://liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org/openstack/glance.git 
+Fetching commit hook from: scp://review.openstack.org:None 
+2016-07-20 17:32:41.724715 Running: scp  liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org:hooks/commit-msg .git/hooks/commit-msg 
+Problems encountered installing commit-msg hook 
+The following command failed with exit code 1 
+    "scp  liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org:hooks/commit-msg .git/hooks/commit-msg" 
+----------------------- 
+.git/hooks/commit-msg: No such file or directory 
+----------------------- 
+wang@poseidon:~/code/glance$ git review -s -vv 
+2016-07-20 17:34:15.721970 Running: git log --color=never --oneline HEAD^1..HEAD 
+2016-07-20 17:34:15.724426 Running: git remote 
+2016-07-20 17:34:15.726400 Running: git branch -a --color=never 
+2016-07-20 17:34:15.729140 Running: git rev-parse --show-toplevel --git-dir 
+2016-07-20 17:34:15.731987 Running: git remote show -n gerrit 
+Found origin Push URL: https://liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org/openstack/glance.git 
+Fetching commit hook from: scp://review.openstack.org:None 
+2016-07-20 17:34:15.734513 Running: scp  liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org:hooks/commit-msg .git/hooks/commit-msg 
+Problems encountered installing commit-msg hook 
+The following command failed with exit code 1 
+    "scp  liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org:hooks/commit-msg .git/hooks/commit-msg" 
+----------------------- 
+.git/hooks/commit-msg: No such file or directory 
+----------------------- 
+wang@poseidon:~/code/glance$ cd .git/hooks 
+wang@poseidon:~/code/glance/.git/hooks$ ls 
+applypatch-msg.sample  pre-applypatch.sample      pre-push.sample 
+commit-msg.sample      pre-commit.sample          pre-rebase.sample 
+post-update.sample     prepare-commit-msg.sample  update.sample 
+wang@poseidon:~/code/glance/.git/hooks$ vi commit-msg 
+wang@poseidon:~/code/glance/.git/hooks$ cd .. 
+wang@poseidon:~/code/glance/.git$ cd .. 
+wang@poseidon:~/code/glance$ git review -s -vv 
+2016-07-20 17:34:51.572472 Running: git log --color=never --oneline HEAD^1..HEAD 
+2016-07-20 17:34:51.574902 Running: git remote 
+2016-07-20 17:34:51.576899 Running: git branch -a --color=never 
+2016-07-20 17:34:51.579005 Running: git rev-parse --show-toplevel --git-dir 
+2016-07-20 17:34:51.580924 Running: git remote show -n gerrit 
+Found origin Push URL: https://liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org/openstack/glance.git 
+wang@poseidon:~/code/glance$ cd .git/hooks 
+wang@poseidon:~/code/glance/.git/hooks$ ls 
+applypatch-msg.sample  pre-applypatch.sample      pre-rebase.sample 
+commit-msg             pre-commit.sample          update.sample 
+commit-msg.sample      prepare-commit-msg.sample 
+post-update.sample     pre-push.sample 
+wang@poseidon:~/code/glance/.git/hooks$ cat commit-msg 
+wang@poseidon:~/code/glance/.git/hooks$ rm -fr commit-msg 
+wang@poseidon:~/code/glance/.git/hooks$ cd .. 
+wang@poseidon:~/code/glance/.git$ cd .. 
+wang@poseidon:~/code/glance$ git review -s 
+Problems encountered installing commit-msg hook 
+The following command failed with exit code 1 
+    "scp  liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org:hooks/commit-msg .git/hooks/commit-msg" 
+----------------------- 
+.git/hooks/commit-msg: No such file or directory 
+----------------------- 
+wang@poseidon:~/code/glance$ vi commit-msg 
+wang@poseidon:~/code/glance$ vi commit-msg 
+wang@poseidon:~/code/glance$ mv commit-msg .git/hooks 
+wang@poseidon:~/code/glance$ vi .git/hooks/commit-msg 
+wang@poseidon:~/code/glance$ git-review -s 
+wang@poseidon:~/code/glance$ git checkout -b typo 
+Switched to a new branch 'typo' 
+wang@poseidon:~/code/glance$ git branch 
+  master 
+* typo 
+wang@poseidon:~/code/glance$ cd db 
+bash: cd: db: No such file or directory 
+wang@poseidon:~/code/glance$ ls 
+api-ref           etc          pylintrc          setup.cfg 
+babel.cfg         glance       rally-jobs        setup.py 
+bandit.yaml       HACKING.rst  README.rst        test-requirements.txt 
+CONTRIBUTING.rst  LICENSE      releasenotes      tox.ini 
+doc               MANIFEST.in  requirements.txt 
+wang@poseidon:~/code/glance$ cd glance/db/sqlalchemy/migrate_repo/ 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo$ ls 
+__init__.py  manage.py  migrate.cfg  README  schema.py  versions 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo$ cd versions/ 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ ls 
+001_add_images_table.py 
+002_add_image_properties_table.py 
+003_add_disk_format.py 
+003_sqlite_downgrade.sql 
+003_sqlite_upgrade.sql 
+004_add_checksum.py 
+005_size_big_integer.py 
+006_key_to_name.py 
+006_mysql_downgrade.sql 
+006_mysql_upgrade.sql 
+006_sqlite_downgrade.sql 
+006_sqlite_upgrade.sql 
+007_add_owner.py 
+008_add_image_members_table.py 
+009_add_mindisk_and_minram.py 
+010_default_update_at.py 
+011_make_mindisk_and_minram_notnull.py 
+011_sqlite_downgrade.sql 
+011_sqlite_upgrade.sql 
+012_id_to_uuid.py 
+013_add_protected.py 
+013_sqlite_downgrade.sql 
+014_add_image_tags_table.py 
+015_quote_swift_credentials.py 
+016_add_status_image_member.py 
+016_sqlite_downgrade.sql 
+017_quote_encrypted_swift_credentials.py 
+018_add_image_locations_table.py 
+019_migrate_image_locations.py 
+020_drop_images_table_location.py 
+021_set_engine_mysql_innodb.py 
+022_image_member_index.py 
+023_placeholder.py 
+024_placeholder.py 
+025_placeholder.py 
+026_add_location_storage_information.py 
+027_checksum_index.py 
+028_owner_index.py 
+029_location_meta_data_pickle_to_string.py 
+030_add_tasks_table.py 
+031_remove_duplicated_locations.py 
+032_add_task_info_table.py 
+033_add_location_status.py 
+034_add_virtual_size.py 
+035_add_metadef_tables.py 
+036_rename_metadef_schema_columns.py 
+037_add_changes_to_satisfy_models.py 
+037_sqlite_downgrade.sql 
+037_sqlite_upgrade.sql 
+038_add_metadef_tags_table.py 
+039_add_changes_to_satisfy_models_metadef.py 
+040_add_changes_to_satisfy_metadefs_tags.py 
+041_add_artifact_tables.py 
+042_add_changes_to_reinstall_unique_metadef_constraints.py 
+043_add_image_created_updated_idx.py 
+044_update_metadef_os_nova_server.py 
+__init__.py 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ vi 039_add_changes_to_satisfy_models_metadef.py 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ git status 
+On branch typo 
+Changes not staged for commit: 
+  (use "git add <file>..." to update what will be committed) 
+  (use "git checkout -- <file>..." to discard changes in working directory) 
+
+	modified:   039_add_changes_to_satisfy_models_metadef.py 
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ git commit -a 
+[typo 6860f01] Fix typo in comment 
+ 1 file changed, 4 insertions(+), 4 deletions(-) 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ git log 
+commit 6860f0195790981f76ff816f04fe9171efb368b5 
+Author: Wei Li <wei.li@easystack.cn> 
+Date:   Wed Jul 20 17:49:05 2016 +0800 
+
+    Fix typo in comment 
+    
+    Change-Id: I124f7bb9c444a65c38bec150ecf482bc91d6c2c3 
+
+commit 46a7146e636d9566c27b6f55a0c5d3d6b55c9e61 
+Author: OpenStack Proposal Bot <openstack-infra@lists.openstack.org> 
+Date:   Mon Jul 18 18:08:24 2016 +0000 
+
+    Updated from global requirements 
+    
+    Change-Id: Ia14b6c0fe21724e399d0a187bac76a001e9b4d0a 
+
+commit 5dfaf4207735bbc6f43130ee10a662185fff99b0 
+Merge: dd6caf5 06af212 
+Author: Jenkins <jenkins@review.openstack.org> 
+Date:   Thu Jul 14 22:27:04 2016 +0000 
+
+    Merge "Cleanup i18n marker functions to match Oslo usage" 
+
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ git config --global core.editor=vim 
+error: invalid key: core.editor=vim 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ git config --global core.editor vim 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ git commit --amend 
+[typo 961b7d2] Fix typo in comment 
+ 1 file changed, 4 insertions(+), 4 deletions(-) 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ git-review 
+fatal: remote error: 
+ A Contributor Agreement must be completed before uploading: 
+
+  https://review.openstack.org/#/settings/agreements 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ git-review 
+remote: Processing changes: new: 1, refs: 1, done    
+remote: 
+remote: New Changes: 
+remote:   https://review.openstack.org/344695 Fix typo in comment 
+remote: 
+To https://liwei1:R5c4OR0GyCyVngbQazYXD94cprHjDSNyBWHz3rH9pg@review.openstack.org/openstack/glance.git 
+ * [new branch]      HEAD -> refs/publish/master/typo 
+wang@poseidon:~/code/glance/glance/db/sqlalchemy/migrate_repo/versions$ 
